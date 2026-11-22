@@ -110,7 +110,7 @@ export const T = {
     elegi_idioma: 'Escolha o seu idioma', elegi_pais: 'Onde quer pedalar?', elegi_pais_sub: 'Cada país tem as suas rotas, com mapa, troços, miradouros e paragens.',
     rutas_n: '{n} rotas', km_n: '{n} km de rotas', division_n: '{n} {division}',
     div: { provincia: ['província', 'províncias'], region: ['região', 'regiões'], distrito: ['distrito', 'distritos'], estado: ['estado', 'estados'] },
-    elegi_division: 'Escolha {division}', buscar: 'Procurar por nome ou rota', cerca: 'Perto de você', todas: 'Todas',
+    elegi_division: 'Escolha {division}', buscar: 'Procurar por nome ou rota', cerca: 'Perto de si', todas: 'Todas',
     abierto: 'Desbloqueado', con_codigo: 'Com código', muestra: 'Grátis', bloqueada: 'Com código',
     ruta_muestra: 'Rota de amostra grátis', desbloquear: 'Desbloquear com código', conseguir: 'Obter o meu código',
     paywall_t: 'Esta rota faz parte do {producto}', paywall_s: 'O seu código abre as {n} rotas do país: mapa, troços, miradouros, paragens e serviços.',

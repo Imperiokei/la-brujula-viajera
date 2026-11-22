@@ -1,0 +1,906 @@
+{
+ "_nota": "Ejemplo del formato: una provincia con UNA ruta (la de muestra gratis). Las rutas pagas completas no estan en este repositorio: viven en el servidor.",
+ "provincia": {
+  "slug": "neuquen",
+  "nombre": "Neuquén",
+  "region": "Patagonia",
+  "frase": "Lagos de postal, bosques de arrayanes y una costanera de 14 km para rodar sin autos.",
+  "como_llegar": "A San Martín de los Andes y Villa La Angostura se llega por la RN 40 (la propia ruta de los Siete Lagos). La capital, Neuquén, es la puerta de entrada del este de la provincia.",
+  "mejor_epoca": "De noviembre a Semana Santa el Parque Nacional Los Arrayanes da más horas para entrar en bici; en otoño e invierno los horarios se acortan: consultá antes.",
+  "tene_en_cuenta": "En la cordillera los campings y proveedurías pueden estar cerrados fuera de temporada: llevá comida y forma de potabilizar agua. En los parques nacionales el casco es obligatorio y los peatones tienen prioridad.",
+  "rutas": [
+   {
+    "id": "neuquen-0",
+    "nombre": "Camino de los Siete Lagos",
+    "km": 108,
+    "desnivel": 1291,
+    "nivel": "exigente",
+    "superficie": "asfalto",
+    "bici": "cualquiera",
+    "dias": "3-4 días",
+    "estrella": true,
+    "foto": "contenido/ciclismo/ar/fotos/neuquen-0-0.webp",
+    "resumen": "El tramo de la RN 40 entre San Martín de los Andes y Villa La Angostura cruza los parques nacionales Lanín y Nahuel Huapi bordeando los lagos Lácar, Machónico, Falkner, Villarino, Escondido, Correntoso y Espejo. Es asfalto de punta a punta, con campings frente al agua para partirlo en varios días. Arranca con una subida larga y después alterna bajadas y repechos entre bosques.",
+    "inicio": {
+     "nombre": "San Martín de los Andes",
+     "lat": -40.15299,
+     "lon": -71.33771
+    },
+    "fin": {
+     "nombre": "Villa La Angostura",
+     "lat": -40.76207,
+     "lon": -71.64723
+    },
+    "tramos": [
+     {
+      "de": "San Martín de los Andes",
+      "a": "Mirador Lago Machónico",
+      "km": 27,
+      "superficie": "asfalto",
+      "nota": "Los primeros 15 km desde la costa del Lácar son en subida: el tramo más duro del camino."
+     },
+     {
+      "de": "Mirador Lago Machónico",
+      "a": "Lago Falkner",
+      "km": 17.5,
+      "superficie": "asfalto",
+      "nota": "Sube y baja entre bosques; pasa el desvío de ripio al Lago Hermoso y entra al Parque Nacional Nahuel Huapi."
+     },
+     {
+      "de": "Lago Falkner",
+      "a": "Pichi Traful",
+      "km": 11,
+      "superficie": "asfalto",
+      "nota": "Lagos Villarino y Escondido, y después una bajada larga con curvas hasta el Pichi Traful."
+     },
+     {
+      "de": "Pichi Traful",
+      "a": "Villa La Angostura",
+      "km": 52.5,
+      "superficie": "asfalto",
+      "nota": "El tramo más largo: pasa por el Correntoso, cuya salida es la segunda subida más dura, y termina junto al Nahuel Huapi."
+     }
+    ],
+    "descansos": [
+     {
+      "nombre": "Camping Lago Hermoso",
+      "tipo": "camping",
+      "lat": -40.35607,
+      "lon": -71.47352,
+      "nota": "Camping junto al lago, con proveeduría que puede estar cerrada; se llega por un desvío de ripio."
+     },
+     {
+      "nombre": "Camping Falkner",
+      "tipo": "camping",
+      "lat": -40.43949,
+      "lon": -71.53445,
+      "nota": "Camping organizado frente al Lago Falkner, con parrilla y sanitarios."
+     },
+     {
+      "nombre": "Camping Pichi Traful",
+      "tipo": "camping",
+      "lat": -40.49989,
+      "lon": -71.58341,
+      "nota": "Acampe agreste a orillas del río, con guardaparque."
+     }
+    ],
+    "miradores": [
+     {
+      "nombre": "Mirador Lago Machónico",
+      "lat": -40.33263,
+      "lon": -71.41767,
+      "que_se_ve": "El Machónico entre cerros con bosque, desde el borde de la ruta."
+     },
+     {
+      "nombre": "Mirador Lago Falkner",
+      "lat": -40.44278,
+      "lon": -71.53917,
+      "que_se_ve": "El Lago Falkner desde la orilla de la ruta, al lado del camping."
+     }
+    ],
+    "servicios": [
+     {
+      "tipo": "estacion",
+      "nombre": "ACA",
+      "marca": "YPF",
+      "lat": -40.762402,
+      "lon": -71.647386
+     },
+     {
+      "tipo": "estacion",
+      "nombre": "ACA",
+      "marca": "YPF",
+      "lat": -40.153367,
+      "lon": -71.333333
+     },
+     {
+      "tipo": "estacion",
+      "nombre": "YPF",
+      "marca": null,
+      "lat": -40.154451,
+      "lon": -71.34273
+     },
+     {
+      "tipo": "gomeria",
+      "nombre": "Pirelli",
+      "marca": null,
+      "lat": -40.154586,
+      "lon": -71.342341
+     },
+     {
+      "tipo": "gomeria",
+      "nombre": "Gomería Los Amigos",
+      "marca": null,
+      "lat": -40.756678,
+      "lon": -71.653306
+     },
+     {
+      "tipo": "bicicleteria",
+      "nombre": "Enduro",
+      "marca": null,
+      "lat": -40.153744,
+      "lon": -71.338444
+     },
+     {
+      "tipo": "bicicleteria",
+      "nombre": "Bayo Abajo",
+      "marca": null,
+      "lat": -40.76123,
+      "lon": -71.647798
+     },
+     {
+      "tipo": "bicicleteria",
+      "nombre": "HG Bicicletas",
+      "marca": null,
+      "lat": -40.156112,
+      "lon": -71.348055
+     }
+    ],
+    "ojo": "Es ruta nacional con tránsito de autos y micros de turismo: chaleco reflectivo, luces y casco. Entre los dos pueblos no hay localidades grandes y las proveedurías de los campings pueden estar cerradas: llevá comida para todas las jornadas.",
+    "fotos": [
+     {
+      "src": "contenido/ciclismo/ar/fotos/neuquen-0-0.webp",
+      "autor": "GaboWade",
+      "licencia": "CC BY-SA 4.0",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Lago_Falkner_Neuqu%C3%A9n_Argentina_2019_02_13.jpg",
+      "que": "Orilla del Lago Falkner con agua transparente y el cerro de fondo."
+     },
+     {
+      "src": "contenido/ciclismo/ar/fotos/neuquen-0-1.webp",
+      "autor": "Claudio Elias",
+      "licencia": "CC BY-SA 4.0",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Lago_Mach%C3%B3nico.jpg",
+      "que": "El Lago Machónico desde el mirador del camino de los Siete Lagos, con cerros nevados."
+     }
+    ],
+    "traza": [
+     [
+      -40.15294,
+      -71.33772,
+      662,
+      0.0
+     ],
+     [
+      -40.15625,
+      -71.33744,
+      708,
+      0.88
+     ],
+     [
+      -40.16109,
+      -71.34509,
+      774,
+      1.76
+     ],
+     [
+      -40.16686,
+      -71.35106,
+      855,
+      2.64
+     ],
+     [
+      -40.17271,
+      -71.35599,
+      874,
+      3.51
+     ],
+     [
+      -40.17915,
+      -71.35917,
+      995,
+      4.39
+     ],
+     [
+      -40.18226,
+      -71.35398,
+      937,
+      5.27
+     ],
+     [
+      -40.18537,
+      -71.35064,
+      933,
+      6.15
+     ],
+     [
+      -40.19125,
+      -71.35654,
+      944,
+      7.03
+     ],
+     [
+      -40.19783,
+      -71.35966,
+      960,
+      7.91
+     ],
+     [
+      -40.20375,
+      -71.35505,
+      1001,
+      8.78
+     ],
+     [
+      -40.21059,
+      -71.3587,
+      1040,
+      9.66
+     ],
+     [
+      -40.21627,
+      -71.36508,
+      1089,
+      10.54
+     ],
+     [
+      -40.22233,
+      -71.36787,
+      1113,
+      11.42
+     ],
+     [
+      -40.2289,
+      -71.37181,
+      1157,
+      12.3
+     ],
+     [
+      -40.23613,
+      -71.37268,
+      1156,
+      13.18
+     ],
+     [
+      -40.24379,
+      -71.37354,
+      1168,
+      14.05
+     ],
+     [
+      -40.25071,
+      -71.37847,
+      1143,
+      14.93
+     ],
+     [
+      -40.25729,
+      -71.384,
+      1119,
+      15.81
+     ],
+     [
+      -40.26504,
+      -71.38597,
+      1104,
+      16.69
+     ],
+     [
+      -40.27251,
+      -71.38874,
+      1094,
+      17.57
+     ],
+     [
+      -40.28039,
+      -71.38929,
+      1081,
+      18.45
+     ],
+     [
+      -40.2882,
+      -71.38912,
+      1091,
+      19.32
+     ],
+     [
+      -40.29446,
+      -71.38435,
+      1043,
+      20.2
+     ],
+     [
+      -40.3012,
+      -71.3878,
+      1012,
+      21.08
+     ],
+     [
+      -40.30808,
+      -71.38318,
+      987,
+      21.96
+     ],
+     [
+      -40.31565,
+      -71.38128,
+      953,
+      22.84
+     ],
+     [
+      -40.32311,
+      -71.3839,
+      966,
+      23.72
+     ],
+     [
+      -40.32602,
+      -71.39102,
+      1000,
+      24.59
+     ],
+     [
+      -40.32928,
+      -71.39986,
+      1011,
+      25.47
+     ],
+     [
+      -40.33002,
+      -71.41017,
+      1027,
+      26.35
+     ],
+     [
+      -40.33391,
+      -71.4183,
+      1025,
+      27.23
+     ],
+     [
+      -40.34047,
+      -71.42388,
+      991,
+      28.11
+     ],
+     [
+      -40.34312,
+      -71.43349,
+      998,
+      28.99
+     ],
+     [
+      -40.34607,
+      -71.44286,
+      1008,
+      29.86
+     ],
+     [
+      -40.35308,
+      -71.44729,
+      1004,
+      30.74
+     ],
+     [
+      -40.36081,
+      -71.44945,
+      1009,
+      31.62
+     ],
+     [
+      -40.36748,
+      -71.45468,
+      1020,
+      32.5
+     ],
+     [
+      -40.37444,
+      -71.45833,
+      1037,
+      33.38
+     ],
+     [
+      -40.38176,
+      -71.46153,
+      1049,
+      34.26
+     ],
+     [
+      -40.38887,
+      -71.46606,
+      1054,
+      35.13
+     ],
+     [
+      -40.39478,
+      -71.47196,
+      1067,
+      36.01
+     ],
+     [
+      -40.39875,
+      -71.4805,
+      1036,
+      36.89
+     ],
+     [
+      -40.40243,
+      -71.48846,
+      1022,
+      37.77
+     ],
+     [
+      -40.40864,
+      -71.49464,
+      1027,
+      38.65
+     ],
+     [
+      -40.41447,
+      -71.50137,
+      1024,
+      39.53
+     ],
+     [
+      -40.42116,
+      -71.5066,
+      1018,
+      40.4
+     ],
+     [
+      -40.42755,
+      -71.51256,
+      1007,
+      41.28
+     ],
+     [
+      -40.42973,
+      -71.52181,
+      1000,
+      42.16
+     ],
+     [
+      -40.43278,
+      -71.53069,
+      967,
+      43.04
+     ],
+     [
+      -40.43879,
+      -71.53419,
+      933,
+      43.92
+     ],
+     [
+      -40.44444,
+      -71.54096,
+      941,
+      44.8
+     ],
+     [
+      -40.44918,
+      -71.54898,
+      963,
+      45.67
+     ],
+     [
+      -40.45164,
+      -71.55859,
+      950,
+      46.55
+     ],
+     [
+      -40.45282,
+      -71.56856,
+      986,
+      47.43
+     ],
+     [
+      -40.45468,
+      -71.5763,
+      991,
+      48.31
+     ],
+     [
+      -40.46128,
+      -71.58082,
+      967,
+      49.19
+     ],
+     [
+      -40.46815,
+      -71.58472,
+      958,
+      50.07
+     ],
+     [
+      -40.47569,
+      -71.58219,
+      971,
+      50.94
+     ],
+     [
+      -40.4832,
+      -71.5816,
+      944,
+      51.82
+     ],
+     [
+      -40.48488,
+      -71.58819,
+      907,
+      52.7
+     ],
+     [
+      -40.48974,
+      -71.595,
+      807,
+      53.58
+     ],
+     [
+      -40.4876,
+      -71.60465,
+      821,
+      54.46
+     ],
+     [
+      -40.48168,
+      -71.61078,
+      820,
+      55.34
+     ],
+     [
+      -40.47673,
+      -71.61879,
+      833,
+      56.21
+     ],
+     [
+      -40.47711,
+      -71.62857,
+      863,
+      57.09
+     ],
+     [
+      -40.48394,
+      -71.63349,
+      850,
+      57.97
+     ],
+     [
+      -40.48964,
+      -71.64008,
+      867,
+      58.85
+     ],
+     [
+      -40.49645,
+      -71.6446,
+      886,
+      59.73
+     ],
+     [
+      -40.50276,
+      -71.64895,
+      920,
+      60.61
+     ],
+     [
+      -40.51046,
+      -71.64906,
+      964,
+      61.48
+     ],
+     [
+      -40.51822,
+      -71.64906,
+      963,
+      62.36
+     ],
+     [
+      -40.52603,
+      -71.6485,
+      998,
+      63.24
+     ],
+     [
+      -40.53385,
+      -71.64963,
+      1034,
+      64.12
+     ],
+     [
+      -40.54152,
+      -71.65085,
+      1018,
+      65.0
+     ],
+     [
+      -40.54933,
+      -71.65165,
+      1015,
+      65.88
+     ],
+     [
+      -40.55676,
+      -71.65453,
+      1010,
+      66.75
+     ],
+     [
+      -40.56433,
+      -71.65596,
+      986,
+      67.63
+     ],
+     [
+      -40.5719,
+      -71.65677,
+      953,
+      68.51
+     ],
+     [
+      -40.57962,
+      -71.65833,
+      926,
+      69.39
+     ],
+     [
+      -40.58734,
+      -71.65668,
+      912,
+      70.27
+     ],
+     [
+      -40.59493,
+      -71.65476,
+      931,
+      71.15
+     ],
+     [
+      -40.5979,
+      -71.64744,
+      962,
+      72.02
+     ],
+     [
+      -40.60548,
+      -71.64528,
+      920,
+      72.9
+     ],
+     [
+      -40.61328,
+      -71.64559,
+      891,
+      73.78
+     ],
+     [
+      -40.62093,
+      -71.64785,
+      857,
+      74.66
+     ],
+     [
+      -40.6281,
+      -71.65212,
+      861,
+      75.54
+     ],
+     [
+      -40.62478,
+      -71.66063,
+      828,
+      76.42
+     ],
+     [
+      -40.61909,
+      -71.66716,
+      831,
+      77.29
+     ],
+     [
+      -40.6131,
+      -71.67383,
+      809,
+      78.17
+     ],
+     [
+      -40.61003,
+      -71.68223,
+      795,
+      79.05
+     ],
+     [
+      -40.60552,
+      -71.69006,
+      813,
+      79.93
+     ],
+     [
+      -40.60217,
+      -71.69876,
+      841,
+      80.81
+     ],
+     [
+      -40.6035,
+      -71.70633,
+      773,
+      81.69
+     ],
+     [
+      -40.60996,
+      -71.70971,
+      794,
+      82.56
+     ],
+     [
+      -40.61398,
+      -71.70727,
+      884,
+      83.44
+     ],
+     [
+      -40.62123,
+      -71.7054,
+      870,
+      84.32
+     ],
+     [
+      -40.62874,
+      -71.70734,
+      883,
+      85.2
+     ],
+     [
+      -40.63588,
+      -71.70403,
+      854,
+      86.08
+     ],
+     [
+      -40.64344,
+      -71.70483,
+      822,
+      86.96
+     ],
+     [
+      -40.64808,
+      -71.70577,
+      811,
+      87.83
+     ],
+     [
+      -40.65516,
+      -71.70362,
+      831,
+      88.71
+     ],
+     [
+      -40.66238,
+      -71.70374,
+      838,
+      89.59
+     ],
+     [
+      -40.66863,
+      -71.69796,
+      824,
+      90.47
+     ],
+     [
+      -40.67616,
+      -71.69646,
+      827,
+      91.35
+     ],
+     [
+      -40.6827,
+      -71.69216,
+      825,
+      92.23
+     ],
+     [
+      -40.69027,
+      -71.69257,
+      856,
+      93.1
+     ],
+     [
+      -40.69491,
+      -71.70003,
+      867,
+      93.98
+     ],
+     [
+      -40.70185,
+      -71.70461,
+      877,
+      94.86
+     ],
+     [
+      -40.70898,
+      -71.70119,
+      868,
+      95.74
+     ],
+     [
+      -40.7158,
+      -71.6971,
+      828,
+      96.62
+     ],
+     [
+      -40.72226,
+      -71.69246,
+      839,
+      97.5
+     ],
+     [
+      -40.72613,
+      -71.68494,
+      805,
+      98.37
+     ],
+     [
+      -40.73205,
+      -71.67839,
+      802,
+      99.25
+     ],
+     [
+      -40.73737,
+      -71.67276,
+      794,
+      100.13
+     ],
+     [
+      -40.74359,
+      -71.66738,
+      787,
+      101.01
+     ],
+     [
+      -40.75126,
+      -71.66637,
+      827,
+      101.89
+     ],
+     [
+      -40.75512,
+      -71.65728,
+      833,
+      102.77
+     ],
+     [
+      -40.75993,
+      -71.6491,
+      806,
+      103.64
+     ],
+     [
+      -40.76202,
+      -71.64722,
+      798,
+      104.52
+     ]
+    ],
+    "fuentes": [
+     "https://www.bikemap.net/en/r/2059220",
+     "https://www.bikemap.net/en/r/814008",
+     "https://www.villalaangosturaturismo.gob.ar/wp-content/uploads/2020/09/Esquema-de-distancias-entre-puntos-de-interes-de-la-Ruta-de-los-Siete-Lagos-Patagonia-Argentina.pdf"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "ciclismo-ar": {
+  "nombre": "Mapa Ciclismo Argentina",
+  "pais": "AR",
+  "tema": "ciclismo",
+  "impultienda": [
+   "cc7db378"
+  ],
+  "tienda": "https://www.clubciclista.site"
+ },
+ "ciclismo-pe": {
+  "nombre": "Mapa Ciclismo Perú",
+  "pais": "PE",
+  "tema": "ciclismo",
+  "impultienda": [
+   "d30c048a-3b54-4d02-9a87-327d825a791e"
+  ],
+  "tienda": "https://pe.clubciclista.site"
+ },
+ "ciclismo-pt": {
+  "nombre": "Mapa Ciclismo Portugal",
+  "pais": "PT",
+  "tema": "ciclismo",
+  "impultienda": [
+   "01eef2a1"
+  ],
+  "tienda": "https://pt.clubciclista.site"
+ },
+ "ciclismo-br": {
+  "nombre": "Mapa Ciclismo Brasil",
+  "pais": "BR",
+  "tema": "ciclismo",
+  "impultienda": [
+   "4713b7e2-baa8-45a1-8ae7-06701009d48d"
+  ],
+  "tienda": "https://br.clubciclista.site"
+ },
+ "motociclismo-ar": {
+  "nombre": "Mapa Motociclismo Argentina",
+  "pais": "AR",
+  "tema": "motociclismo",
+  "estado": "proximamente",
+  "impultienda": [],
+  "tienda": null
+ }
+}

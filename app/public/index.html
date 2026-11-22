@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>La Brújula Viajera</title>
+  <meta name="description" content="Rutas en bici verificadas, país por país: mapa, tramos, miradores y paradas.">
+  <meta name="theme-color" content="#0F2B2D">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Brújula">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="img/icono-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="img/icono-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="barra" id="barra">
+    <a class="marca" href="#/paises" aria-label="La Brújula Viajera">
+      <img src="img/logo.svg" alt="" width="34" height="34">
+      <span>La Brújula <em>Viajera</em></span>
+    </a>
+    <nav class="nav-arriba" id="nav-arriba"></nav>
+  </header>
+  <div class="aviso-red" id="aviso-red" hidden></div>
+  <main id="app" tabindex="-1"></main>
+  <nav class="nav-abajo" id="nav-abajo"></nav>
+  <div class="hoja-fondo" id="hoja-fondo" hidden></div>
+  <section class="hoja" id="hoja" role="dialog" aria-modal="true" hidden></section>
+  <div class="toast" id="toast" hidden></div>
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

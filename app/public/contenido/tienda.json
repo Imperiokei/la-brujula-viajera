@@ -1,0 +1,124 @@
+{
+ "items": [
+  {
+   "id": "ciclismo-ar",
+   "pais": "AR",
+   "tipo": "mapa",
+   "producto_app": "ciclismo-ar",
+   "titulo": "Mapa Ciclismo Argentina",
+   "descripcion": "72 rutas en 23 provincias y CABA: tramos, perfil de altura, miradores, paradas y servicios.",
+   "link": "https://www.clubciclista.site",
+   "tapa": "contenido/tienda/ciclismo-ar.webp"
+  },
+  {
+   "id": "ar-travesias",
+   "pais": "AR",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Grandes travesías etapa por etapa",
+   "descripcion": "6 travesías armadas día por día: 26 etapas, 1.502 km, dónde dormir y qué llevar.",
+   "link": "https://www.clubciclista.site/checkout?p=eec32de4-ec62-4fc1-86cf-a158b06666a3",
+   "tapa": "contenido/tienda/ar-travesias.webp"
+  },
+  {
+   "id": "ar-maratonistas",
+   "pais": "AR",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Preparación física para maratonistas",
+   "descripcion": "16 semanas para llegar a tu maratón de MTB, gran fondo o travesía.",
+   "link": "https://www.clubciclista.site/checkout?p=79f28d0e-08fb-44ce-bdc5-ac47db29f53c",
+   "tapa": "contenido/tienda/ar-maratonistas.webp"
+  },
+  {
+   "id": "ar-plan-12",
+   "pais": "AR",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Plan de 12 semanas para tu primera travesía",
+   "descripcion": "El entrenamiento semana a semana para pedalear varios días seguidos.",
+   "link": "https://www.clubciclista.site/checkout?p=9ea62e63-1a10-4b67-b666-0b6d87fcddc2",
+   "tapa": "contenido/tienda/ar-plan-12.webp"
+  },
+  {
+   "id": "ar-mecanica",
+   "pais": "AR",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Mecánica de ruta",
+   "descripcion": "10 arreglos paso a paso: pinchaduras, cadena y cambios en el camino.",
+   "link": "https://www.clubciclista.site/checkout?p=e7e27c62-8dfc-4338-8daf-f1d979a0939e",
+   "tapa": "contenido/tienda/ar-mecanica.webp"
+  },
+  {
+   "id": "ar-comer",
+   "pais": "AR",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Comer y tomar en ruta",
+   "descripcion": "Qué comer y cuánto tomar antes, durante y después de cada salida.",
+   "link": "https://www.clubciclista.site/checkout?p=e897743c-0345-4a0c-9b4a-ae105accd11d",
+   "tapa": "contenido/tienda/ar-comer.webp"
+  },
+  {
+   "id": "ar-escapadas",
+   "pais": "AR",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Escapadas de un día desde tu ciudad",
+   "descripcion": "Rutas para ir y volver en el día desde las ciudades grandes.",
+   "link": "https://www.clubciclista.site/checkout?p=12e974b8-2456-4c55-b3aa-660e4a2c47d3",
+   "tapa": "contenido/tienda/ar-escapadas.webp"
+  },
+  {
+   "id": "ar-planificador",
+   "pais": "AR",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Planificador de cicloviaje",
+   "descripcion": "Etapas, km por día, dónde dormir, presupuesto y lista de equipo.",
+   "link": "https://www.clubciclista.site/checkout?p=62301b51-2084-4d22-8ead-55f98baecf84",
+   "tapa": "contenido/tienda/ar-planificador.webp"
+  },
+  {
+   "id": "ar-super-pack",
+   "pais": "AR",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Super Pack",
+   "descripcion": "Escapadas + Planificador + Mecánica + Comer y tomar en ruta, en un PDF.",
+   "link": "https://www.clubciclista.site/checkout?p=3df85cb7-82a6-4ab7-8b39-757827f692ce",
+   "tapa": "contenido/tienda/ar-super-pack.webp"
+  },
+  {
+   "id": "ciclismo-pe",
+   "pais": "PE",
+   "tipo": "mapa",
+   "producto_app": "ciclismo-pe",
+   "titulo": "Mapa Ciclismo Perú",
+   "descripcion": "75 rutas en 25 regiones: tramos, perfil de altura, miradores, paradas y servicios.",
+   "link": "https://pe.clubciclista.site",
+   "tapa": "contenido/tienda/ciclismo-pe.webp"
+  },
+  {
+   "id": "ciclismo-pt",
+   "pais": "PT",
+   "tipo": "mapa",
+   "producto_app": "ciclismo-pt",
+   "titulo": "Mapa Ciclismo Portugal",
+   "descripcion": "60 rotas em 20 distritos: troços, perfil de altitude, miradouros, paragens e serviços.",
+   "link": "https://pt.clubciclista.site",
+   "tapa": "contenido/tienda/ciclismo-pt.webp"
+  },
+  {
+   "id": "ciclismo-br",
+   "pais": "BR",
+   "tipo": "mapa",
+   "producto_app": "ciclismo-br",
+   "titulo": "Mapa Ciclismo Brasil",
+   "descripcion": "81 rotas em 27 estados: trechos, perfil de altitude, mirantes, paradas e serviços.",
+   "link": "https://br.clubciclista.site",
+   "tapa": "contenido/tienda/ciclismo-br.webp"
+  }
+ ]
+}

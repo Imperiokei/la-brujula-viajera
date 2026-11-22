@@ -1,0 +1,123 @@
+{
+ "version": "202611211636-062f4583",
+ "paises": [
+  {
+   "cc": "AR",
+   "nombre": {
+    "es": "Argentina",
+    "en": "Argentina",
+    "pt": "Argentina",
+    "fr": "Argentine",
+    "it": "Argentina",
+    "de": "Argentinien"
+   },
+   "idioma": "es",
+   "moneda": "ARS",
+   "division": "provincia",
+   "foto": "contenido/ciclismo/ar/fotos/neuquen-0-0.webp",
+   "productos": [
+    {
+     "id": "ciclismo-ar",
+     "tema": "ciclismo",
+     "estado": "activo",
+     "provincias": 24,
+     "rutas": 72,
+     "km": 2142,
+     "foto": "contenido/ciclismo/ar/fotos/neuquen-0-0.webp",
+     "tienda": "https://www.clubciclista.site",
+     "muestra": "neuquen-0"
+    },
+    {
+     "id": "motociclismo-ar",
+     "tema": "motociclismo",
+     "estado": "proximamente",
+     "pais": "AR"
+    }
+   ]
+  },
+  {
+   "cc": "PE",
+   "nombre": {
+    "es": "Perú",
+    "en": "Peru",
+    "pt": "Peru",
+    "fr": "Pérou",
+    "it": "Perù",
+    "de": "Peru"
+   },
+   "idioma": "es",
+   "moneda": "PEN",
+   "division": "region",
+   "foto": "contenido/ciclismo/pe/fotos/amazonas-0-0.webp",
+   "productos": [
+    {
+     "id": "ciclismo-pe",
+     "tema": "ciclismo",
+     "estado": "activo",
+     "provincias": 25,
+     "rutas": 75,
+     "km": 1551,
+     "foto": "contenido/ciclismo/pe/fotos/amazonas-0-0.webp",
+     "tienda": "https://pe.clubciclista.site",
+     "muestra": "amazonas-0"
+    }
+   ]
+  },
+  {
+   "cc": "PT",
+   "nombre": {
+    "es": "Portugal",
+    "en": "Portugal",
+    "pt": "Portugal",
+    "fr": "Portugal",
+    "it": "Portogallo",
+    "de": "Portugal"
+   },
+   "idioma": "pt",
+   "moneda": "EUR",
+   "division": "distrito",
+   "foto": "contenido/ciclismo/pt/fotos/evora-0-0.webp",
+   "productos": [
+    {
+     "id": "ciclismo-pt",
+     "tema": "ciclismo",
+     "estado": "activo",
+     "provincias": 20,
+     "rutas": 60,
+     "km": 1166,
+     "foto": "contenido/ciclismo/pt/fotos/evora-0-0.webp",
+     "tienda": "https://pt.clubciclista.site",
+     "muestra": "evora-0"
+    }
+   ]
+  },
+  {
+   "cc": "BR",
+   "nombre": {
+    "es": "Brasil",
+    "en": "Brazil",
+    "pt": "Brasil",
+    "fr": "Brésil",
+    "it": "Brasile",
+    "de": "Brasilien"
+   },
+   "idioma": "pt",
+   "moneda": "BRL",
+   "division": "estado",
+   "foto": "contenido/ciclismo/br/fotos/distrito-federal-0-0.webp",
+   "productos": [
+    {
+     "id": "ciclismo-br",
+     "tema": "ciclismo",
+     "estado": "activo",
+     "provincias": 27,
+     "rutas": 81,
+     "km": 1803,
+     "foto": "contenido/ciclismo/br/fotos/distrito-federal-0-0.webp",
+     "tienda": "https://br.clubciclista.site",
+     "muestra": "distrito-federal-0"
+    }
+   ]
+  }
+ ]
+}

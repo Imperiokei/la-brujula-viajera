@@ -1,0 +1,15 @@
+{
+  "name": "la-brujula-viajera",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "App de rutas por país con códigos de desbloqueo por producto",
+  "scripts": {
+    "dev": "node servidor.mjs",
+    "contenido": "py herramientas/armar_contenido.py",
+    "tienda": "py herramientas/armar_tienda.py",
+    "version": "node herramientas/version.mjs",
+    "codigos": "node herramientas/codigos.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

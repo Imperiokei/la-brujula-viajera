@@ -1,0 +1,12 @@
+{
+  "appId": "site.clubciclista.brujula",
+  "appName": "La Brújula Viajera",
+  "webDir": "public",
+  "server": {
+    "url": "https://brujula.2-29-145-136.sslip.io",
+    "cleartext": false,
+    "errorPath": "index.html"
+  },
+  "android": { "backgroundColor": "#0F2B2D" },
+  "ios": { "backgroundColor": "#0F2B2D", "contentInset": "always" }
+}

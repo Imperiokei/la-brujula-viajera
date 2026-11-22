@@ -1,0 +1,22 @@
+{
+ "locales": [
+  {
+   "id": "cafe-de-ejemplo-neuquen",
+   "ejemplo": true,
+   "nombre": "Café de ejemplo [EJEMPLO]",
+   "tipo": "cafeteria",
+   "pais": "AR",
+   "provincia": "neuquen",
+   "lat": -40.1575,
+   "lon": -71.3522,
+   "direccion": "[EJEMPLO] Dirección del local",
+   "horario": "[EJEMPLO] Todos los días de 8 a 20",
+   "descripcion": "[EJEMPLO] Así se ve un local de Turismo: fotos, qué ofrece, horarios y cómo llegar. Este no es un local real; solo aparece en la PC para revisar el diseño.",
+   "promo": {"titulo": "[EJEMPLO] Café gratis para ciclistas", "detalle": "Mostrando el pase de la app en la caja"},
+   "fotos": [],
+   "activo": true,
+   "alta": "2026-11-21",
+   "pagado_hasta": "2099-12-31"
+  }
+ ]
+}

@@ -119,6 +119,96 @@
    "descripcion": "81 rotas em 27 estados: trechos, perfil de altitude, mirantes, paradas e serviços.",
    "link": "https://br.clubciclista.site",
    "tapa": "contenido/tienda/ciclismo-br.webp"
+  },
+  {
+   "id": "mapas-co",
+   "pais": "CO",
+   "tipo": "mapa",
+   "producto_app": "motociclismo-co",
+   "titulo": "Mapas de Colombia en moto, carro y casa rodante",
+   "descripcion": "15 rutas escénicas en 10 departamentos: recorrido en el mapa, perfil de altura, estaciones de servicio, gomerías y talleres. Con la guía PDF Rutas escénicas de Colombia.",
+   "link": "https://colombia-en-ruedas.impultienda.ar/checkout?p=ffcd0ab1-763f-4e1f-a602-23400c8e085a",
+   "tapa": "contenido/tienda/mapas-co.webp"
+  },
+  {
+   "id": "co-guia",
+   "pais": "CO",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Colombia en Ruedas",
+   "descripcion": "Los 32 departamentos y Bogotá por carretera: 387 lugares, 99 secretos, 44 campings y glampings y los peajes. Guía digital (PDF) con 4 regalos.",
+   "link": "https://colombia-en-ruedas.impultienda.ar",
+   "tapa": "contenido/tienda/co-guia.webp"
+  },
+  {
+   "id": "co-planificador",
+   "pais": "CO",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Planificador de viaje en carro",
+   "descripcion": "Itinerario día por día, presupuesto con peajes, gasolina y alojamiento, lista de chequeo y registro de km. Para imprimir.",
+   "link": "https://colombia-en-ruedas.impultienda.ar/checkout?p=4e19ef79-5641-41dc-86d0-86d1fff13b93",
+   "tapa": "contenido/tienda/co-planificador.webp"
+  },
+  {
+   "id": "co-telefonos",
+   "pais": "CO",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Teléfonos de emergencia en la carretera",
+   "descripcion": "Emergencias, INVÍAS, Cruz Roja, Defensa Civil y bomberos por departamento, y dónde puede fallar la señal.",
+   "link": "https://colombia-en-ruedas.impultienda.ar/checkout?p=c30c464d-6d00-4bd1-86e3-a4e3828d93ed",
+   "tapa": "contenido/tienda/co-telefonos.webp"
+  },
+  {
+   "id": "mapas-pl",
+   "pais": "PL",
+   "tipo": "mapa",
+   "producto_app": "motociclismo-pl",
+   "titulo": "Mapy Polski: motocykl, samochód i kamper",
+   "descripcion": "12 tras widokowych w 10 województwach: trasa na mapie, profil wysokości, stacje paliw, wulkanizacje i warsztaty. Z przewodnikiem PDF Trasy widokowe.",
+   "link": "https://polska-na-kolach.impultienda.ar/checkout?p=b88d37fa-f3c1-49c5-bc17-205fd4dd1fe0",
+   "tapa": "contenido/tienda/mapas-pl.webp"
+  },
+  {
+   "id": "pl-przewodnik",
+   "pais": "PL",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Polska na kołach",
+   "descripcion": "16 województw samochodem, motocyklem i kamperem: 184 atrakcje, 48 sekretnych miejsc i 53 campingi. Przewodnik cyfrowy (PDF) z 4 prezentami.",
+   "link": "https://polska-na-kolach.impultienda.ar",
+   "tapa": "contenido/tienda/pl-przewodnik.webp"
+  },
+  {
+   "id": "mapas-cz",
+   "pais": "CZ",
+   "tipo": "mapa",
+   "producto_app": "motociclismo-cz",
+   "titulo": "Mapy Česka: motorka, auto i obytňák",
+   "descripcion": "15 tras ve 13 krajích: trasa na mapě, výškový profil, čerpací stanice, pneuservisy a autoservisy. S průvodcem PDF Nejkrásnější silnice Česka.",
+   "link": "https://projed-cesko.impultienda.ar/checkout?p=62bd9f43-29c8-4490-aff9-4638e07ee796",
+   "tapa": "contenido/tienda/mapas-cz.webp"
+  },
+  {
+   "id": "cz-pruvodce",
+   "pais": "CZ",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Projeď Česko",
+   "descripcion": "Všech 14 krajů autem, na motorce i obytňákem: 196 míst, 70 tajných míst a 101 kempů. Digitální průvodce (PDF) s dárky.",
+   "link": "https://projed-cesko.impultienda.ar",
+   "tapa": "contenido/tienda/cz-pruvodce.webp"
+  },
+  {
+   "id": "cz-planovac",
+   "pais": "CZ",
+   "tipo": "extra",
+   "producto_app": null,
+   "titulo": "Plánovač cesty + náklady",
+   "descripcion": "Itinerář den po dni, rozpočet na palivo, známku a kempy, kniha jízd a kontrolní seznam. K vytištění.",
+   "link": "https://projed-cesko.impultienda.ar/checkout?p=e2ed45c0-f6e9-4f27-a1a9-0a5b0df6503d",
+   "tapa": "contenido/tienda/cz-planovac.webp"
   }
  ]
 }

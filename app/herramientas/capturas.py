@@ -19,6 +19,8 @@ for cc, tema, prov, idi in [("CO", "motociclismo", "antioquia", "es"), ("CO", "a
     if prov:
         PANTALLAS += [(f"22-{cc.lower()}-{tema}-{prov}", f"#/pais/{cc}/{tema}/{prov}", idi, cc),
                       (f"23-{cc.lower()}-{tema}-ruta", f"#/ruta/{cc}/{tema}/{prov}/{prov}-0", idi, cc)]
+# Tienda de cada país nuevo, en su idioma
+PANTALLAS += [(f"24-tienda-{cc.lower()}", f"#/tienda?pais={cc}", idi, cc) for cc, idi in [("CO", "es"), ("PL", "en"), ("CZ", "de")]]
 GEO = {"AR": (-38.95, -68.06), "CO": (6.25, -75.56), "PL": (50.06, 19.94), "CZ": (50.08, 14.43)}
 with sync_playwright() as p:
     b = p.chromium.launch(channel="chrome")

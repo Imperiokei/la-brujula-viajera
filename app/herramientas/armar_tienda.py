@@ -16,6 +16,8 @@ for it in fuente["items"]:
         im.thumbnail((640, 640))
         im.save(os.path.join(SAL, it["id"] + ".webp"), "WEBP", quality=78, method=6)
         tapa = f"contenido/tienda/{it['id']}.webp"
+    elif os.path.exists(os.path.join(SAL, it["id"] + ".webp")):  # la tapa original no está en esta PC: se usa la ya publicada
+        tapa = f"contenido/tienda/{it['id']}.webp"
     elif it.get("tipo") == "mapa":  # sin tapa: la foto del país
         tapa = paises.get(it["pais"], {}).get("foto")
     else:

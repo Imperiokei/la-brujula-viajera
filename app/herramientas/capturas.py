@@ -12,16 +12,26 @@ PANTALLAS = [("1-inicio", "#/inicio", None), ("2-idioma", "#/idioma?primera=1", 
              ("8-codigo", "#/codigo?producto=ciclismo-ar", "es"), ("9-ruta-en-ingles", "#/ruta/AR/ciclismo/neuquen/neuquen-0", "en"), ("12-tienda", "#/tienda", "es"), ("13-tienda-pt-en-portugues", "#/tienda?pais=PT", "pt"),
              ("14-turismo", "#/turismo", "es"), ("15-local-ejemplo", "#/local/cafe-de-ejemplo-neuquen", "es"), ("16-sumar-local", "#/turismo/sumar", "es"),
              ("17-cuenta", "#/cuenta", "es"), ("18-pais-bloqueado", "#/pais/PE", "es")]
+# Mapas de moto, auto y autocaravana (guías «en Ruedas»): (nombre, ruta, idioma, país detectado)
+for cc, tema, prov, idi in [("CO", "motociclismo", "antioquia", "es"), ("CO", "autocaravana", "boyaca", "en"),
+                            ("PL", "auto", None, "de"), ("CZ", "motociclismo", None, "es")]:
+    PANTALLAS += [(f"20-{cc.lower()}-mapas", f"#/pais/{cc}", idi, cc), (f"21-{cc.lower()}-{tema}", f"#/pais/{cc}/{tema}", idi, cc)]
+    if prov:
+        PANTALLAS += [(f"22-{cc.lower()}-{tema}-{prov}", f"#/pais/{cc}/{tema}/{prov}", idi, cc),
+                      (f"23-{cc.lower()}-{tema}-ruta", f"#/ruta/{cc}/{tema}/{prov}/{prov}-0", idi, cc)]
+GEO = {"AR": (-38.95, -68.06), "CO": (6.25, -75.56), "PL": (50.06, 19.94), "CZ": (50.08, 14.43)}
 with sync_playwright() as p:
     b = p.chromium.launch(channel="chrome")
     for nombre_disp, vw, vh, movil in [("pc", 1366, 900, False), ("celu", 390, 844, True)]:
         ctx = b.new_context(viewport={"width": vw, "height": vh}, is_mobile=movil, has_touch=movil, device_scale_factor=2 if movil else 1,
                             geolocation={"latitude": -38.95, "longitude": -68.06}, permissions=["geolocation"], service_workers="block")
         pg = ctx.new_page()
-        for nombre, ruta, lang in PANTALLAS:
+        for nombre, ruta, lang, *cc in PANTALLAS:
+            cc = cc[0] if cc else "AR"
+            ctx.set_geolocation({"latitude": GEO[cc][0], "longitude": GEO[cc][1]})
             pg.goto(BASE)
-            pg.evaluate("""([lang]) => { localStorage.clear(); if (lang) { localStorage.setItem('bv.idioma', JSON.stringify(lang));
-                localStorage.setItem('bv.detectado', JSON.stringify({cc:'AR', prov:'neuquen', por:'gps'})); } }""", [lang])
+            pg.evaluate("""([lang, cc]) => { localStorage.clear(); if (lang) { localStorage.setItem('bv.idioma', JSON.stringify(lang));
+                localStorage.setItem('bv.detectado', JSON.stringify({cc, prov: cc === 'AR' ? 'neuquen' : '', por:'gps'})); } }""", [lang, cc])
             pg.goto("about:blank"); pg.goto(BASE + ruta)
             pg.wait_for_timeout(2600)
             ancho = pg.evaluate("document.documentElement.scrollWidth")

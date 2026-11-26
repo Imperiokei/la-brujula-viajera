@@ -41,7 +41,29 @@ PAISES = [
 ]
 
 SIN_FOTOS = "--sin-fotos" in sys.argv
-TEMA = "ciclismo"  # hoy solo hay datos de ciclismo; motociclismo u otros se suman con su propia lista PAISES
+
+
+def arg(nombre, defecto=None):
+    if nombre in sys.argv:
+        i = sys.argv.index(nombre)
+        if i + 1 < len(sys.argv):
+            return sys.argv[i + 1]
+    return defecto
+
+
+# --tema motociclismo|auto|autocaravana: lee los países de datos/mapas-ruedas.json y sus carpetas «<TEMA> <CC>»
+# dentro de --datos (por defecto, la carpeta de productos). Sin --tema se arma ciclismo como siempre.
+TEMA = arg("--tema", "ciclismo")
+if arg("--datos"):
+    PRODUCTOS = os.path.abspath(arg("--datos"))
+if TEMA != "ciclismo":
+    _cfg = json.load(open(os.path.join(DAT, "mapas-ruedas.json"), encoding="utf-8"))
+    PAISES = [{**p, "carpeta": p["carpeta"].format(TEMA=TEMA.upper()),
+               "muestra": tuple(p["muestra"]) if p.get("muestra") else None}
+              for p in _cfg["paises"] if TEMA in p.get("temas", [])]
+    PROXIMOS = []
+# Los productos que ya están en paises.json y no se arman en esta corrida se conservan (ej.: ciclismo al armar motos).
+SUMAR = TEMA != "ciclismo" or "--sumar" in sys.argv
 
 
 def slug(s):
@@ -98,6 +120,40 @@ def punto(p):
     return {k: p.get(k) for k in ("nombre", "lat", "lon") if p.get(k) is not None}
 
 
+def sumar_a_lo_existente(resumen, ubicaciones, cajas):
+    """Mezcla lo armado ahora con paises.json y ubicaciones.json actuales, sin borrar los productos de otros temas."""
+    viejo = {}
+    pp = os.path.join(PUB, "paises.json")
+    if os.path.exists(pp):
+        viejo = {p["cc"]: p for p in json.load(open(pp, encoding="utf-8"))["paises"]}
+    orden = list(viejo)
+    for nuevo in resumen:
+        cc = nuevo["cc"]
+        if cc in viejo:
+            ids = {x["id"] for x in nuevo["productos"]}
+            p = viejo[cc]
+            p["productos"] = [x for x in p["productos"] if x["id"] not in ids] + nuevo["productos"]
+            if not p.get("foto"):
+                p["foto"] = nuevo["foto"]
+        else:
+            viejo[cc] = nuevo
+            orden.append(cc)
+    paises = [viejo[cc] for cc in orden]
+    pu = os.path.join(DAT, "ubicaciones.json")
+    if os.path.exists(pu):
+        u = json.load(open(pu, encoding="utf-8"))
+        hechos = {(x["cc"], x["prov"]) for x in ubicaciones}
+        ubicaciones = [x for x in u.get("puntos", []) if (x["cc"], x["prov"]) not in hechos] + ubicaciones
+        for cc, c in u.get("cajas", {}).items():  # cajas viejas ya traen el margen
+            if cc in cajas:
+                m = 1.0
+                n = cajas[cc]
+                cajas[cc] = [min(n[0], c[0] + m), min(n[1], c[1] + m), max(n[2], c[2] - m), max(n[3], c[3] - m)]
+            else:
+                cajas[cc] = [c[0] + 1.0, c[1] + 1.0, c[2] - 1.0, c[3] - 1.0]
+    return paises, ubicaciones, cajas
+
+
 def main():
     os.makedirs(PUB, exist_ok=True)
     resumen = []
@@ -150,6 +206,8 @@ def main():
                              "nivel": r.get("nivel"), "superficie": r.get("superficie"), "bici": r.get("bici"),
                              "dias": r.get("dias"), "estrella": bool(r.get("estrella")),
                              "foto": fotos[0]["src"] if fotos else None}
+                    if r.get("vehiculo"):  # motos, autos y casas rodantes: qué vehículo conviene
+                        ficha["vehiculo"] = r["vehiculo"]
                     fichas.append(ficha)
                     completas.append({**ficha, "resumen": r.get("resumen"), "inicio": ini, "fin": fin,
                                       "tramos": r.get("tramos", []),
@@ -185,9 +243,13 @@ def main():
         json.dump(indice, open(os.path.join(PUB, TEMA, cc.lower(), "indice.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
         prod = {"id": f"{TEMA}-{cc.lower()}", "tema": TEMA, "estado": "activo", "provincias": len(provincias), "rutas": n_rutas,
                 "km": round(km_total), "foto": portada, "tienda": P["tienda"], "muestra": indice["muestra"]}
+        if P.get("pendiente"):  # sin producto de Impultienda confirmado: se ve como «Próximamente» y no abre nada
+            prod = {"id": prod["id"], "tema": TEMA, "estado": "proximamente", "pais": cc}
         resumen.append({"cc": cc, "nombre": P["nombre"], "idioma": P["idioma"], "moneda": P["moneda"], "division": P["division"],
                         "foto": portada, "productos": [prod] + [x for x in PROXIMOS if x["pais"] == cc]})
         print(f"{cc}: {len(provincias)} provincias, {n_rutas} rutas, {round(km_total)} km")
+    if SUMAR:
+        resumen, ubicaciones, cajas = sumar_a_lo_existente(resumen, ubicaciones, cajas)
     huella = hashlib.sha1(json.dumps(resumen, sort_keys=True).encode()).hexdigest()[:8]
     version = datetime.datetime.now().strftime("%Y%m%d%H%M") + "-" + huella
     json.dump({"version": version, "paises": resumen}, open(os.path.join(PUB, "paises.json"), "w", encoding="utf-8"),

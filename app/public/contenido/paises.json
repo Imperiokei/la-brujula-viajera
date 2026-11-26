@@ -1,5 +1,5 @@
 {
- "version": "202611211636-062f4583",
+ "version": "202611250035-1a4e9c24",
  "paises": [
   {
    "cc": "AR",
@@ -116,6 +116,226 @@
      "foto": "contenido/ciclismo/br/fotos/distrito-federal-0-0.webp",
      "tienda": "https://br.clubciclista.site",
      "muestra": "distrito-federal-0"
+    }
+   ]
+  },
+  {
+   "cc": "CO",
+   "nombre": {
+    "es": "Colombia",
+    "en": "Colombia",
+    "pt": "Colômbia",
+    "fr": "Colombie",
+    "it": "Colombia",
+    "de": "Kolumbien"
+   },
+   "idioma": "es",
+   "moneda": "COP",
+   "division": "departamento",
+   "foto": "contenido/motociclismo/co/fotos/antioquia-0-0.webp",
+   "productos": [
+    {
+     "id": "motociclismo-co",
+     "tema": "motociclismo",
+     "estado": "activo",
+     "provincias": 10,
+     "rutas": 15,
+     "km": 1021,
+     "foto": "contenido/motociclismo/co/fotos/antioquia-0-0.webp",
+     "tienda": "https://colombia-en-ruedas.impultienda.ar/checkout?p=ffcd0ab1-763f-4e1f-a602-23400c8e085a",
+     "muestra": "antioquia-0"
+    },
+    {
+     "id": "auto-co",
+     "tema": "auto",
+     "estado": "activo",
+     "provincias": 10,
+     "rutas": 15,
+     "km": 1021,
+     "foto": "contenido/auto/co/fotos/antioquia-0-0.webp",
+     "tienda": "https://colombia-en-ruedas.impultienda.ar/checkout?p=ffcd0ab1-763f-4e1f-a602-23400c8e085a",
+     "muestra": "antioquia-0"
+    },
+    {
+     "id": "autocaravana-co",
+     "tema": "autocaravana",
+     "estado": "activo",
+     "provincias": 10,
+     "rutas": 15,
+     "km": 1021,
+     "foto": "contenido/autocaravana/co/fotos/antioquia-0-0.webp",
+     "tienda": "https://colombia-en-ruedas.impultienda.ar/checkout?p=ffcd0ab1-763f-4e1f-a602-23400c8e085a",
+     "muestra": "antioquia-0"
+    }
+   ]
+  },
+  {
+   "cc": "PL",
+   "nombre": {
+    "es": "Polonia",
+    "en": "Poland",
+    "pt": "Polónia",
+    "fr": "Pologne",
+    "it": "Polonia",
+    "de": "Polen"
+   },
+   "idioma": "pl",
+   "moneda": "PLN",
+   "division": "voivodato",
+   "foto": "contenido/motociclismo/pl/fotos/dolnoslaskie-0-0.webp",
+   "productos": [
+    {
+     "id": "motociclismo-pl",
+     "tema": "motociclismo",
+     "estado": "activo",
+     "provincias": 10,
+     "rutas": 12,
+     "km": 1349,
+     "foto": "contenido/motociclismo/pl/fotos/dolnoslaskie-0-0.webp",
+     "tienda": "https://polska-na-kolach.impultienda.ar/checkout?p=b88d37fa-f3c1-49c5-bc17-205fd4dd1fe0",
+     "muestra": "dolnoslaskie-0"
+    },
+    {
+     "id": "auto-pl",
+     "tema": "auto",
+     "estado": "activo",
+     "provincias": 10,
+     "rutas": 12,
+     "km": 1349,
+     "foto": "contenido/auto/pl/fotos/dolnoslaskie-0-0.webp",
+     "tienda": "https://polska-na-kolach.impultienda.ar/checkout?p=b88d37fa-f3c1-49c5-bc17-205fd4dd1fe0",
+     "muestra": "dolnoslaskie-0"
+    },
+    {
+     "id": "autocaravana-pl",
+     "tema": "autocaravana",
+     "estado": "activo",
+     "provincias": 10,
+     "rutas": 12,
+     "km": 1349,
+     "foto": "contenido/autocaravana/pl/fotos/dolnoslaskie-0-0.webp",
+     "tienda": "https://polska-na-kolach.impultienda.ar/checkout?p=b88d37fa-f3c1-49c5-bc17-205fd4dd1fe0",
+     "muestra": "dolnoslaskie-0"
+    }
+   ]
+  },
+  {
+   "cc": "CZ",
+   "nombre": {
+    "es": "Chequia",
+    "en": "Czechia",
+    "pt": "Chéquia",
+    "fr": "Tchéquie",
+    "it": "Cechia",
+    "de": "Tschechien"
+   },
+   "idioma": "cs",
+   "moneda": "CZK",
+   "division": "kraj",
+   "foto": "contenido/motociclismo/cz/fotos/jihocesky-0-0.webp",
+   "productos": [
+    {
+     "id": "motociclismo-cz",
+     "tema": "motociclismo",
+     "estado": "activo",
+     "provincias": 13,
+     "rutas": 15,
+     "km": 621,
+     "foto": "contenido/motociclismo/cz/fotos/jihocesky-0-0.webp",
+     "tienda": "https://projed-cesko.impultienda.ar/checkout?p=62bd9f43-29c8-4490-aff9-4638e07ee796",
+     "muestra": "jihocesky-0"
+    },
+    {
+     "id": "auto-cz",
+     "tema": "auto",
+     "estado": "activo",
+     "provincias": 13,
+     "rutas": 15,
+     "km": 621,
+     "foto": "contenido/auto/cz/fotos/jihocesky-0-0.webp",
+     "tienda": "https://projed-cesko.impultienda.ar/checkout?p=62bd9f43-29c8-4490-aff9-4638e07ee796",
+     "muestra": "jihocesky-0"
+    },
+    {
+     "id": "autocaravana-cz",
+     "tema": "autocaravana",
+     "estado": "activo",
+     "provincias": 13,
+     "rutas": 15,
+     "km": 621,
+     "foto": "contenido/autocaravana/cz/fotos/jihocesky-0-0.webp",
+     "tienda": "https://projed-cesko.impultienda.ar/checkout?p=62bd9f43-29c8-4490-aff9-4638e07ee796",
+     "muestra": "jihocesky-0"
+    }
+   ]
+  },
+  {
+   "cc": "BG",
+   "nombre": {
+    "es": "Bulgaria",
+    "en": "Bulgaria",
+    "pt": "Bulgária",
+    "fr": "Bulgarie",
+    "it": "Bulgaria",
+    "de": "Bulgarien"
+   },
+   "idioma": "bg",
+   "moneda": "EUR",
+   "division": "oblast",
+   "foto": "contenido/motociclismo/bg/fotos/blagoevgrad-0-0.webp",
+   "productos": [
+    {
+     "id": "motociclismo-bg",
+     "tema": "motociclismo",
+     "estado": "proximamente",
+     "pais": "BG"
+    },
+    {
+     "id": "auto-bg",
+     "tema": "auto",
+     "estado": "proximamente",
+     "pais": "BG"
+    },
+    {
+     "id": "autocaravana-bg",
+     "tema": "autocaravana",
+     "estado": "proximamente",
+     "pais": "BG"
+    }
+   ]
+  },
+  {
+   "cc": "HU",
+   "nombre": {
+    "es": "Hungría",
+    "en": "Hungary",
+    "pt": "Hungria",
+    "fr": "Hongrie",
+    "it": "Ungheria",
+    "de": "Ungarn"
+   },
+   "idioma": "hu",
+   "moneda": "HUF",
+   "division": "megye",
+   "foto": "contenido/motociclismo/hu/fotos/baranya-0-0.webp",
+   "productos": [
+    {
+     "id": "motociclismo-hu",
+     "tema": "motociclismo",
+     "estado": "proximamente",
+     "pais": "HU"
+    },
+    {
+     "id": "auto-hu",
+     "tema": "auto",
+     "estado": "proximamente",
+     "pais": "HU"
+    },
+    {
+     "id": "autocaravana-hu",
+     "tema": "autocaravana",
+     "estado": "proximamente",
+     "pais": "HU"
     }
    ]
   }

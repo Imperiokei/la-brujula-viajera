@@ -1,0 +1,122 @@
+{
+ "_nota": "Países de los mapas de motociclismo, auto y autocaravana (guías «en Ruedas»). Los mapas de un país los abre la compra de su extra de rutas escénicas (las mismas rutas, ahora en la app). 'pendiente': true = falta el producto de Impultienda confirmado; el mapa se ve como «Próximamente». Uso: py herramientas/armar_contenido.py --tema motociclismo --datos <carpeta con «MOTOCICLISMO <CC>/_build/datos»>",
+ "paises": [
+  {
+   "cc": "CO",
+   "carpeta": "{TEMA} CO",
+   "idioma": "es",
+   "moneda": "COP",
+   "division": "departamento",
+   "nombre": {
+    "es": "Colombia",
+    "en": "Colombia",
+    "pt": "Colômbia",
+    "fr": "Colombie",
+    "it": "Colombia",
+    "de": "Kolumbien"
+   },
+   "temas": [
+    "motociclismo",
+    "auto",
+    "autocaravana"
+   ],
+   "producto": "ffcd0ab1-763f-4e1f-a602-23400c8e085a",
+   "tienda": "https://colombia-en-ruedas.impultienda.ar/checkout?p=ffcd0ab1-763f-4e1f-a602-23400c8e085a",
+   "muestra": null
+  },
+  {
+   "cc": "PL",
+   "carpeta": "{TEMA} PL",
+   "idioma": "pl",
+   "moneda": "PLN",
+   "division": "voivodato",
+   "nombre": {
+    "es": "Polonia",
+    "en": "Poland",
+    "pt": "Polónia",
+    "fr": "Pologne",
+    "it": "Polonia",
+    "de": "Polen"
+   },
+   "temas": [
+    "motociclismo",
+    "auto",
+    "autocaravana"
+   ],
+   "producto": "b88d37fa-f3c1-49c5-bc17-205fd4dd1fe0",
+   "tienda": "https://polska-na-kolach.impultienda.ar/checkout?p=b88d37fa-f3c1-49c5-bc17-205fd4dd1fe0",
+   "muestra": null
+  },
+  {
+   "cc": "CZ",
+   "carpeta": "{TEMA} CZ",
+   "idioma": "cs",
+   "moneda": "CZK",
+   "division": "kraj",
+   "nombre": {
+    "es": "Chequia",
+    "en": "Czechia",
+    "pt": "Chéquia",
+    "fr": "Tchéquie",
+    "it": "Cechia",
+    "de": "Tschechien"
+   },
+   "temas": [
+    "motociclismo",
+    "auto",
+    "autocaravana"
+   ],
+   "producto": "62bd9f43-29c8-4490-aff9-4638e07ee796",
+   "tienda": "https://projed-cesko.impultienda.ar/checkout?p=62bd9f43-29c8-4490-aff9-4638e07ee796",
+   "muestra": null
+  },
+  {
+   "cc": "BG",
+   "carpeta": "{TEMA} BG",
+   "idioma": "bg",
+   "moneda": "EUR",
+   "division": "oblast",
+   "nombre": {
+    "es": "Bulgaria",
+    "en": "Bulgaria",
+    "pt": "Bulgária",
+    "fr": "Bulgarie",
+    "it": "Bulgaria",
+    "de": "Bulgarien"
+   },
+   "temas": [
+    "motociclismo",
+    "auto",
+    "autocaravana"
+   ],
+   "producto": null,
+   "tienda": "https://obikoli-balgaria.impultienda.ar",
+   "muestra": null,
+   "pendiente": true
+  },
+  {
+   "cc": "HU",
+   "carpeta": "{TEMA} HU",
+   "idioma": "hu",
+   "moneda": "HUF",
+   "division": "megye",
+   "nombre": {
+    "es": "Hungría",
+    "en": "Hungary",
+    "pt": "Hungria",
+    "fr": "Hongrie",
+    "it": "Ungheria",
+    "de": "Ungarn"
+   },
+   "temas": [
+    "motociclismo",
+    "auto",
+    "autocaravana"
+   ],
+   "producto": null,
+   "tienda": null,
+   "muestra": null,
+   "pendiente": true
+  }
+ ]
+}

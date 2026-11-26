@@ -95,10 +95,10 @@ const paisLibre = cc => {
   const p = PAISES?.find(x => x.cc === cc);
   return cc === paisBase() || !!p?.productos.some(x => estaAbierto(x.id));
 };
-const temaEmoji = tema => (tema === 'motociclismo' ? '🏍️' : '🚴');
-const TIPOS_SERV = ['estacion', 'gomeria', 'bicicleteria'];
-const EMO_SERV = { estacion: '⛽', gomeria: '🛞', bicicleteria: '🔧' };
-const COLOR_SERV = { estacion: '#B4432F', gomeria: '#4A4F57', bicicleteria: '#2D5B73' };
+const temaEmoji = tema => ({ motociclismo: '🏍️', auto: '🚗', autocaravana: '🚐' }[tema] || '🚴');
+const TIPOS_SERV = ['estacion', 'gomeria', 'bicicleteria', 'taller'];
+const EMO_SERV = { estacion: '⛽', gomeria: '🛞', bicicleteria: '🔧', taller: '🧰' };
+const COLOR_SERV = { estacion: '#B4432F', gomeria: '#4A4F57', bicicleteria: '#2D5B73', taller: '#6B4E2E' };
 const emoClima = (c, dia = 1) => c === 0 ? (dia ? '☀️' : '🌙') : c <= 2 ? (dia ? '🌤️' : '☁️') : c === 3 ? '☁️' : c <= 48 ? '🌫️' : c <= 57 ? '🌦️'
   : c <= 67 ? '🌧️' : c <= 77 ? '🌨️' : c <= 82 ? '🌧️' : c <= 86 ? '🌨️' : '⛈️';
 const nombreTema = tema => t('temas')[tema] || tema;
@@ -435,7 +435,9 @@ P.ruta = async (q, cc, tema, slug, id) => {
   const r = d.rutas.find(x => x.id === id);
   if (!r) { location.hash = `#/pais/${cc}/${tema}/${slug}`; if (prod) paywall(prod, cc); return; }
   const fotos = r.fotos || [];
-  const gm = (lat, lon) => `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=bicycling`;
+  const gm = (lat, lon) => `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=${tema === 'ciclismo' ? 'bicycling' : 'driving'}`;
+  // servicios que sirven a cada tema: bicicleterías para bici; talleres para motos, autos y casas rodantes
+  const tiposServ = TIPOS_SERV.filter(k => (tema === 'ciclismo' ? k !== 'taller' : k !== 'bicicleteria'));
   const nota = idioma !== ind.idioma ? `<div class="nota-idioma">${ico('info')}${esc(t('contenido_en', { idioma: NOMBRE_IDIOMA[idioma]?.[ind.idioma] || ind.idioma }))}</div>` : '';
   const cuenta = {}; for (const s of r.servicios || []) cuenta[s.tipo] = (cuenta[s.tipo] || 0) + 1;
   const lugar = (clase, icono, nombre, texto, lat, lon) => `
@@ -456,8 +458,8 @@ P.ruta = async (q, cc, tema, slug, id) => {
         <div><b>${r.desnivel ? fmt(r.desnivel) + ' m' : '—'}</b><small>${esc(t('desnivel'))}</small></div>
         <div><b>${esc(tv('v_dias', r.dias))}</b><small>${esc(t('duracion'))}</small></div>
         <div><b class="${nivelClase(r.nivel)}">${esc(tv('v_nivel', r.nivel))}</b><small>${esc(t('nivel'))}</small></div>
-        <div><b>${esc(tv('v_sup', r.superficie))}</b><small>${esc(t('superficie'))}</small></div>
-        <div><b>${esc(tv('v_bici', r.bici))}</b><small>${esc(t('bici'))}</small></div>
+        ${r.superficie ? `<div><b>${esc(tv('v_sup', r.superficie))}</b><small>${esc(t('superficie'))}</small></div>` : `<div><b>${fmt((r.servicios || []).length)}</b><small>${esc(t('servicios'))}</small></div>`}
+        ${r.vehiculo ? `<div><b>${esc(tv('v_vehiculo_' + tema, r.vehiculo))}</b><small>${esc(t('vehiculo_' + tema))}</small></div>` : `<div><b>${esc(tv('v_bici', r.bici))}</b><small>${esc(t('bici'))}</small></div>`}
       </div>
       ${nota}
       <div class="det-cuerpo">
@@ -467,7 +469,7 @@ P.ruta = async (q, cc, tema, slug, id) => {
             <div class="capas" id="capas">
               <button class="capa" data-capa="miradores" aria-pressed="true"><i style="background:#E58E1F"></i>${esc(t('miradores'))}</button>
               <button class="capa" data-capa="descansos" aria-pressed="true"><i style="background:#5E8C6A"></i>${esc(t('descansos'))}</button>
-              ${TIPOS_SERV.filter(k => cuenta[k]).map(k => `<button class="capa" data-capa="${k}" aria-pressed="true"><span class="emo">${EMO_SERV[k]}</span>${esc(tv('v_serv', k))}</button>`).join('')}
+              ${tiposServ.filter(k => cuenta[k]).map(k => `<button class="capa" data-capa="${k}" aria-pressed="true"><span class="emo">${EMO_SERV[k]}</span>${esc(tv('v_serv', k))}</button>`).join('')}
             </div></div>
           ${r.traza?.length > 5 && r.traza[0].length > 2 ? `<div class="bloque"><h2>${esc(t('perfil'))}</h2>${perfil(r.traza, r.desnivel)}</div>` : ''}
         </div>
@@ -481,12 +483,12 @@ P.ruta = async (q, cc, tema, slug, id) => {
           ${r.miradores?.length ? `<div class="bloque"><h2>${esc(t('miradores'))}</h2><div class="lugares">${r.miradores.map(m => lugar('ico-mirador', 'ojito', m.nombre, m.que_se_ve, m.lat, m.lon)).join('')}</div></div>` : ''}
           ${r.descansos?.length ? `<div class="bloque"><h2>${esc(t('descansos'))}</h2><div class="lugares">${r.descansos.map(m => lugar('ico-descanso', 'carpa', m.nombre, [tv('v_desc', m.tipo), m.nota].filter(Boolean).join(' · '), m.lat, m.lon)).join('')}</div></div>` : ''}
           <div class="bloque" id="cerca-ruta" hidden></div>
-          ${(r.servicios || []).length ? `<div class="bloque" id="en-camino"><h2>${esc(t('en_camino'))}</h2><p class="sub-bloque">${esc(t('en_camino_sub'))}</p>
-            <div class="filtros-serv">${TIPOS_SERV.map((k, i) => `<button class="filtro-serv" data-tipo="${k}" aria-pressed="${i === 0}"><span class="emo">${EMO_SERV[k]}</span>${esc(tv('v_serv', k))}<b>${cuenta[k] || 0}</b></button>`).join('')}</div>
+          ${(r.servicios || []).length ? `<div class="bloque" id="en-camino"><h2>${esc(t('en_camino'))}</h2><p class="sub-bloque">${esc(t(tema === 'ciclismo' ? 'en_camino_sub' : 'en_camino_sub_motor'))}</p>
+            <div class="filtros-serv">${tiposServ.map((k, i) => `<button class="filtro-serv" data-tipo="${k}" aria-pressed="${i === 0}"><span class="emo">${EMO_SERV[k]}</span>${esc(tv('v_serv', k))}<b>${cuenta[k] || 0}</b></button>`).join('')}</div>
             <div class="lista-serv" id="lista-serv"></div></div>` : ''}
           <div class="acciones-det">
             ${r.inicio?.lat != null ? `<a class="btn btn-tinta btn-ancho" href="${gm(r.inicio.lat, r.inicio.lon)}" target="_blank" rel="noopener">${ico('pin')}${esc(t('abrir_maps'))}</a>` : ''}
-            <p class="aviso-legal">${esc(t('aviso'))}</p>
+            <p class="aviso-legal">${esc(t(tema === 'ciclismo' ? 'aviso' : 'aviso_motor'))}</p>
           </div>
           <div class="bloque resenas" id="resenas"><h2>${esc(t('resenas'))}</h2><div class="giro"></div></div>
         </div>
@@ -513,8 +515,8 @@ P.ruta = async (q, cc, tema, slug, id) => {
       document.querySelectorAll('.filtro-serv').forEach(x => x.setAttribute('aria-pressed', x === b));
       pintarServ(b.dataset.tipo);
     };
-    pintarServ(TIPOS_SERV.find(k => cuenta[k]) || 'estacion');
-    document.querySelectorAll('.filtro-serv').forEach(x => x.setAttribute('aria-pressed', x.dataset.tipo === (TIPOS_SERV.find(k => cuenta[k]) || 'estacion')));
+    pintarServ(tiposServ.find(k => cuenta[k]) || 'estacion');
+    document.querySelectorAll('.filtro-serv').forEach(x => x.setAttribute('aria-pressed', x.dataset.tipo === (tiposServ.find(k => cuenta[k]) || 'estacion')));
   }
   if (r.inicio?.lat != null) { cargarClima(r.inicio.lat, r.inicio.lon); localesCerca(r.inicio.lat, r.inicio.lon); }
   cargarResenas(`${tema}/${cc.toLowerCase()}/${id}`);
@@ -613,7 +615,8 @@ function dibujarMapa(r) {
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18, attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
   }).addTo(mapa);
-  const gm = (lat, lon) => `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=bicycling`;
+  const enBici = (location.hash.split('/')[3] || 'ciclismo') === 'ciclismo'; // #/pais/CC/tema/…
+  const gm = (lat, lon) => `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=${enBici ? 'bicycling' : 'driving'}`;
   const popup = (titulo, texto, lat, lon) => `<b>${esc(titulo)}</b>${texto ? esc(texto) + '<br>' : ''}<a href="${gm(lat, lon)}" target="_blank" rel="noopener">${esc(t('como_ir'))} →</a>`;
   const grupoTraza = L.featureGroup().addTo(mapa);
   const linea = (r.traza || []).map(p => [p[0], p[1]]);

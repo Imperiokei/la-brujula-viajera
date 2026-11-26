@@ -1,6 +1,6 @@
 // La Brújula Viajera · service worker. La línea VERSION la cambia herramientas/version.mjs en cada publicación:
 // así el celular se entera de que hay app nueva y ofrece «Actualizar» sin reinstalar nada.
-const VERSION = '1.0.14-202611212213';
+const VERSION = '1.0.17-202611250035';
 const CASCARA = 'bv-app-' + VERSION;
 const CONTENIDO = 'bv-contenido';
 const FOTOS = 'bv-fotos';

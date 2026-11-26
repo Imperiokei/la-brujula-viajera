@@ -42,5 +42,134 @@
   "estado": "proximamente",
   "impultienda": [],
   "tienda": null
+ },
+ "motociclismo-co": {
+  "nombre": "Mapa Motociclismo Colombia",
+  "pais": "CO",
+  "tema": "motociclismo",
+  "impultienda": [
+   "ffcd0ab1-763f-4e1f-a602-23400c8e085a"
+  ],
+  "tienda": "https://colombia-en-ruedas.impultienda.ar/checkout?p=ffcd0ab1-763f-4e1f-a602-23400c8e085a"
+ },
+ "auto-co": {
+  "nombre": "Mapa Auto Colombia",
+  "pais": "CO",
+  "tema": "auto",
+  "impultienda": [
+   "ffcd0ab1-763f-4e1f-a602-23400c8e085a"
+  ],
+  "tienda": "https://colombia-en-ruedas.impultienda.ar/checkout?p=ffcd0ab1-763f-4e1f-a602-23400c8e085a"
+ },
+ "autocaravana-co": {
+  "nombre": "Mapa Autocaravana Colombia",
+  "pais": "CO",
+  "tema": "autocaravana",
+  "impultienda": [
+   "ffcd0ab1-763f-4e1f-a602-23400c8e085a"
+  ],
+  "tienda": "https://colombia-en-ruedas.impultienda.ar/checkout?p=ffcd0ab1-763f-4e1f-a602-23400c8e085a"
+ },
+ "motociclismo-pl": {
+  "nombre": "Mapa Motociclismo Polonia",
+  "pais": "PL",
+  "tema": "motociclismo",
+  "impultienda": [
+   "b88d37fa-f3c1-49c5-bc17-205fd4dd1fe0"
+  ],
+  "tienda": "https://polska-na-kolach.impultienda.ar/checkout?p=b88d37fa-f3c1-49c5-bc17-205fd4dd1fe0"
+ },
+ "auto-pl": {
+  "nombre": "Mapa Auto Polonia",
+  "pais": "PL",
+  "tema": "auto",
+  "impultienda": [
+   "b88d37fa-f3c1-49c5-bc17-205fd4dd1fe0"
+  ],
+  "tienda": "https://polska-na-kolach.impultienda.ar/checkout?p=b88d37fa-f3c1-49c5-bc17-205fd4dd1fe0"
+ },
+ "autocaravana-pl": {
+  "nombre": "Mapa Autocaravana Polonia",
+  "pais": "PL",
+  "tema": "autocaravana",
+  "impultienda": [
+   "b88d37fa-f3c1-49c5-bc17-205fd4dd1fe0"
+  ],
+  "tienda": "https://polska-na-kolach.impultienda.ar/checkout?p=b88d37fa-f3c1-49c5-bc17-205fd4dd1fe0"
+ },
+ "motociclismo-cz": {
+  "nombre": "Mapa Motociclismo Chequia",
+  "pais": "CZ",
+  "tema": "motociclismo",
+  "impultienda": [
+   "62bd9f43-29c8-4490-aff9-4638e07ee796"
+  ],
+  "tienda": "https://projed-cesko.impultienda.ar/checkout?p=62bd9f43-29c8-4490-aff9-4638e07ee796"
+ },
+ "auto-cz": {
+  "nombre": "Mapa Auto Chequia",
+  "pais": "CZ",
+  "tema": "auto",
+  "impultienda": [
+   "62bd9f43-29c8-4490-aff9-4638e07ee796"
+  ],
+  "tienda": "https://projed-cesko.impultienda.ar/checkout?p=62bd9f43-29c8-4490-aff9-4638e07ee796"
+ },
+ "autocaravana-cz": {
+  "nombre": "Mapa Autocaravana Chequia",
+  "pais": "CZ",
+  "tema": "autocaravana",
+  "impultienda": [
+   "62bd9f43-29c8-4490-aff9-4638e07ee796"
+  ],
+  "tienda": "https://projed-cesko.impultienda.ar/checkout?p=62bd9f43-29c8-4490-aff9-4638e07ee796"
+ },
+ "motociclismo-bg": {
+  "nombre": "Mapa Motociclismo Bulgaria",
+  "pais": "BG",
+  "tema": "motociclismo",
+  "impultienda": [],
+  "tienda": "https://obikoli-balgaria.impultienda.ar",
+  "estado": "proximamente"
+ },
+ "auto-bg": {
+  "nombre": "Mapa Auto Bulgaria",
+  "pais": "BG",
+  "tema": "auto",
+  "impultienda": [],
+  "tienda": "https://obikoli-balgaria.impultienda.ar",
+  "estado": "proximamente"
+ },
+ "autocaravana-bg": {
+  "nombre": "Mapa Autocaravana Bulgaria",
+  "pais": "BG",
+  "tema": "autocaravana",
+  "impultienda": [],
+  "tienda": "https://obikoli-balgaria.impultienda.ar",
+  "estado": "proximamente"
+ },
+ "motociclismo-hu": {
+  "nombre": "Mapa Motociclismo Hungría",
+  "pais": "HU",
+  "tema": "motociclismo",
+  "impultienda": [],
+  "tienda": null,
+  "estado": "proximamente"
+ },
+ "auto-hu": {
+  "nombre": "Mapa Auto Hungría",
+  "pais": "HU",
+  "tema": "auto",
+  "impultienda": [],
+  "tienda": null,
+  "estado": "proximamente"
+ },
+ "autocaravana-hu": {
+  "nombre": "Mapa Autocaravana Hungría",
+  "pais": "HU",
+  "tema": "autocaravana",
+  "impultienda": [],
+  "tienda": null,
+  "estado": "proximamente"
  }
 }

@@ -2,3 +2,6 @@
 node_modules/
 android/
 ios/
+
+# Rutas pagas completas (datos/<tema>/<cc>/): nunca al repositorio público, van aparte y en privado
+datos/*/

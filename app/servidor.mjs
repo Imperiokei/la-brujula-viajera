@@ -73,8 +73,15 @@ function leerPermiso(tok) {
 function productosVigentes(permiso) {
   if (!permiso) return [];
   const db = leerCodigos();
-  const activos = new Set(Object.values(db.codigos).filter(c => c.activo && c.dispositivos.includes(permiso.d)).map(c => c.producto));
+  const activos = new Set(Object.values(db.codigos).filter(c => c.activo && c.dispositivos.includes(permiso.d)).flatMap(c => hermanos(c.producto)));
   return permiso.p.filter(p => activos.has(p));
+}
+// Productos que se venden juntos (mismo producto de Impultienda, p. ej. moto + auto + autocaravana de un país):
+// un código de cualquiera de ellos abre todos.
+function hermanos(p) {
+  const ids = PRODUCTOS[p]?.impultienda || [];
+  if (!ids.length) return [p];
+  return [...new Set([p, ...Object.entries(PRODUCTOS).filter(([, v]) => (v.impultienda || []).some(x => ids.includes(x))).map(([k]) => k)])];
 }
 
 // ---------- utilidades HTTP ----------
@@ -452,7 +459,7 @@ const servidor = http.createServer(async (req, res) => {
       }
       const previo = leerPermiso(permiso);
       const productos = new Set(previo && previo.d === dispositivo ? productosVigentes(previo) : []);
-      productos.add(c.producto);
+      for (const h of hermanos(c.producto)) productos.add(h);
       return json(res, 200, { permiso: emitirPermiso([...productos], dispositivo), productos: [...productos], nuevo: c.producto, codigo: k });
     }
     if (ruta === '/api/permiso') { // la app confirma qué sigue vigente (por si hubo reembolso)

@@ -57,3 +57,12 @@ El repositorio es público (se entra con el link) pero solo el dueño publica. E
 
 Como el repositorio es público, **las rutas pagas completas nunca se suben acá**. Los JSON de rutas nuevas (`datos/<tema>/…`)
 van aparte: subilos en privado al dueño (zip por Drive o WhatsApp). En el pull request van solo el código, las tapas y un ejemplo.
+
+## Revisión del 2026-11-26 (pull requests 1 y 2: Colombia, Polonia y Chequia)
+Unidos a `main`. Cambio del lado del dueño: en `servidor.mjs`, un código abre todos los productos que comparten el mismo
+producto de Impultienda (moto + auto + autocaravana de un país); antes abría solo el primero. Falta para publicar:
+1. **Los JSON de rutas** `datos/motociclismo|auto|autocaravana/<cc>/*.json` de CO, PL y CZ: mandalos en un .zip privado.
+   Sin ellos no abre ninguna ruta, ni la de muestra gratis.
+2. **Bandera** de Colombia, Polonia, Chequia, Bulgaria y Hungría: hoy sale el ícono del globo en lugar de la bandera.
+3. **Título del inicio** «¿Dónde quieres pedalear?»: que sea neutro («¿Adónde quieres viajar?») o según el tema, en los 6 idiomas.
+Antes de empezar: `git pull` del repositorio original para traer estos cambios.
